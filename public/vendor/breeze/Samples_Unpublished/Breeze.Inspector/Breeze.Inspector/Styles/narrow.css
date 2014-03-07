@@ -1,0 +1,99 @@
+﻿.loading {
+    font-size: 1.5em;
+}
+
+header {
+    height: 6em;
+}
+
+header h1 {
+    font-size: 2em;
+    padding-top: .125em;
+    padding-bottom: .1em;
+    line-height: .1.1em;
+}
+
+header h2 {
+    display: none;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+header button {
+    top: .125em;
+}
+
+header button.back {
+    left: 0em;
+    top: 2.25em;
+    transform: scale(.5,.5);
+    -ms-transform: scale(.5,.5);
+    -webkit-transform: scale(.5,.5);
+    -o-transform: scale(.5,.5);
+    -moz-transform: scale(.5,.5);
+}
+
+div.status {
+    right: 0em;
+    top: 2.25em;
+    transform: scale(.5,.5);
+    -ms-transform: scale(.5,.5);
+    -webkit-transform: scale(.5,.5);
+    -o-transform: scale(.5,.5);
+    -moz-transform: scale(.5,.5);
+}
+
+section {
+    top: 6em;
+    bottom: 0;
+}
+
+.commands {
+    top: 4.9em;
+}
+
+.commands a {
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.job-list ul li {
+    font-size: 1em;
+}
+
+.small-icon  {
+    position: relative;
+    top: 6px;
+    transform: scale(.75,.75);
+    -ms-transform: scale(.75,.75);
+    -webkit-transform: scale(.75,.75);
+    -o-transform: scale(.75,.75);
+    -moz-transform: scale(.75,.75);
+}
+
+.form {
+    border-spacing: 0px 10px;
+    border-collapse: separate;
+}
+
+.validation-message {
+    position: relative;
+    top: 4px;
+    left: 4px;
+    display: block;
+    margin-right: 12px;
+}
+
+.modal .header {
+    font-size: 1em;
+}
+
+.form-type {
+    font-size: 1em;
+}
+
+#simplemodal-container {
+    width:250px; 
+}

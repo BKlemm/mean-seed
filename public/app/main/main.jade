@@ -1,0 +1,12 @@
+.container
+	img(src="images/spinner.gif", ng-hide="true", style="width:400px;")
+	.jumbotron(ng-cloak)
+		h1 Angularnode
+		p Welcome to Angularnode! The most comprehensive and complete collection
+
+	.row(ng-cloak)
+		.col-md-6
+			div(ng-include="'/partials/main/featured-courses'")
+
+		.col-md-6
+			div(ng-include="'/partials/main/new-courses'")

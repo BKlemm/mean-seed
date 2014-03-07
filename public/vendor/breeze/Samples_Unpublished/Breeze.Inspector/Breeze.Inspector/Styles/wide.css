@@ -1,0 +1,22 @@
+﻿.loading {
+    font-size: 7em;
+}
+
+header {
+    height: 6em;
+}
+
+header h1 {
+    font-size: 3em;
+    padding-top: .125em;
+    padding-bottom: .1em;
+}
+
+header button {
+    top: .125em;
+}
+
+section {
+    top: 6em;
+    bottom: 0;
+}

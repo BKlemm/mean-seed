@@ -1,0 +1,15 @@
+﻿<div class="modal">
+    <div>
+        <div class="header">Add Inspection</div>
+        <div class="body">
+            <ul data-bind="foreach: forms">
+                <li class="simplemodal-close form-type" data-bind="click: function() { $parent.selectForm($data) }">
+                    <span data-bind="text: Type"></span>
+                </li>
+            </ul>
+            <span data-bind="visible: forms().length == 0">
+                No additional forms can be added.
+            </span>
+        </div>
+    </div>
+</div>

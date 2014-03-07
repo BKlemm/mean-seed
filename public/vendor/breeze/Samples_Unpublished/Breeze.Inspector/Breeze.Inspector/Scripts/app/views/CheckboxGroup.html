@@ -1,0 +1,11 @@
+﻿<div class="field checkbox-group" data-bind="css:{invalid:invalid}">
+    <span class="label" data-bind="text: question.Text"></span>
+    <span class="validation-message" data-bind="visible: invalid, text: validationMessage"></span>
+    <ul>
+        <!-- ko foreach: options -->
+        <li>
+            <input type="checkbox" data-bind="checked: checked"/><span data-bind="text: text"></span>
+        </li>
+        <!-- /ko -->
+    </ul>
+</div>

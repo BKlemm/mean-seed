@@ -1,0 +1,330 @@
+﻿body {
+    width: 100%;
+}
+
+.loading {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 1em;
+    margin: auto;
+    padding-bottom: .125em;
+    text-align: center;
+    background: black;
+    color: white;
+    
+    -moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+header {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    background: black;
+    z-index: 10;
+}
+
+h3 {
+    text-align: center;
+    margin: .5em;
+    font-size: 2.5em;
+}
+
+header button {
+    position: absolute;
+}
+
+header button.back {
+    left: 1.5em;
+    top: .25em;
+    background: transparent;
+    background-image: url("/Images/Back.png");
+    border: none;
+    width: 70px;
+    height: 60px;
+}
+
+section {
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.commands {
+    top: 4.5em;   
+    position: absolute; 
+}
+
+.commands.left {
+    left: 1em;
+}
+
+.commands.right {
+    right: 1em;
+}
+
+.commands a {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.commands a.disabled {
+    color: lightgray;
+    cursor: auto;
+}
+
+.status {
+    position: absolute;
+    right: 1.5em;
+    width: 56px;
+    height: 54px;
+    top: .7em;
+}
+
+.login {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 3em;
+    text-align: center;
+}
+
+.login h2 {
+    text-align: center;
+    font-weight: bold;   
+    font-size: 2em; 
+}
+
+.login ul {
+    margin-top: 2em;
+    position: absolute;
+    left: 50%;
+}
+
+.login ul li {
+    text-align: left;
+    margin-left: -75%;
+    border-bottom: 1px solid blue;
+    padding: 16px 0px;
+    margin-right: 25%;
+}
+
+.login ul li:last-child {
+    border-bottom: none;
+}
+
+.login a {
+    font-size: 1.3em;
+}
+
+.login a:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.job-list ul {
+    margin: 1em;
+}
+
+.job-list ul li {
+    border-bottom: 1px solid blue;
+    font-size: 2em;
+    padding: 0;
+    margin-top: 1em;
+}
+
+.job-list ul li:last-child {
+    border-bottom: none;
+}
+
+ul.inspections li{
+    font-size: 1em;
+    border: none;
+    margin: .5em 0;
+}
+
+.form {
+    margin: 1em;
+    display: table;
+    border-collapse: collapse;
+}
+
+.field textarea {
+    width: 100%;
+}
+
+.form .field {
+    margin-bottom: 2em;
+    display: table-row;
+}
+
+.form .field ul {
+    margin-top: 1em;
+    display: table-cell;
+}
+
+.form .field .label {
+    font-size: 1.2em;
+    display: table-cell;
+    padding-right: .5em;
+    text-align: right;
+}
+
+.form .field .label.top {
+    vertical-align: top;    
+}
+
+.form .field input, .field .field textarea, .field .field select {
+    font-size: 1.2em;
+    display: table-cell;
+}
+
+.validation-message {
+    color: white;
+    background: red;
+    padding: 2px 6px;
+    
+    -moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	
+	-o-box-shadow: rgba(0, 0, 0, .5) 2px 2px 10px;
+    -webkit-box-shadow: rgba(0, 0, 0, .5) 2px 2px 10px;
+    -moz-box-shadow: rgba(0, 0, 0, .5) 2px 2px 10px;
+    box-shadow: rgba(0, 0, 0, .5) 2px 2px 10px;
+}
+
+button.add {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+button.add span {
+    position: relative;
+    font-size: 1.5em;
+    top: -14px;
+    left: 4px;
+}
+
+.form-type {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: black;
+    margin: .25em;
+}
+
+.modal .header {
+    font-size: 2em;
+    color: white;
+    background: black;
+    padding: .5em;
+}
+
+.modal .body 
+{
+    padding: .25em;
+    background: white;
+}
+
+.inProgress 
+{
+    width: 56px;
+    height: 62px;
+    background: url('/Images/Warn_Large.png');
+}
+
+.canceled 
+{
+    width: 58px;
+    height: 60px;
+    background: url('/Images/X_Large.png');
+}
+
+.done {
+    background: url('/Images/Check_Large.png');
+}
+
+.small-icon {
+    display: inline-block;
+}
+
+.small-icon.inProgress 
+{
+    width: 27px;
+    height: 23px;
+    background: url('/Images/Warn_Small.png');
+}
+
+.small-icon.canceled 
+{
+    width: 25px;
+    height: 29px;
+    background: url('/Images/x.png');
+}
+
+.small-icon.done 
+{
+    width: 26px;
+    height: 26px;
+    background: url('/Images/Check_Small.png');
+}
+
+.newText {
+    color: gray;
+}
+
+.inProgressText {
+    color: orange;
+}
+
+.doneText {
+    color: green;
+}
+
+.canceledText {
+    color: red;
+}
+
+.inspection-list-item {
+    font-size: 1.2em;
+    margin: 0 0 1em 2em;
+}
+
+/* Overlay */
+#simplemodal-overlay {
+    background-color:#000; 
+    cursor:wait;
+}
+
+/* Container */
+#simplemodal-container {
+    width:400px; 
+    color:#bbb; 
+    background-color:#333; 
+    border:4px solid #444;
+    height: auto;
+}
+
+#simplemodal-container a.modalCloseImg {
+    background:url("/Images/x.png") no-repeat; 
+    width:25px; 
+    height:29px; 
+    display:inline; 
+    z-index:3200; 
+    position:absolute; 
+    top:-15px; 
+    right:-16px; 
+    cursor:pointer;
+    color:#ddd;
+}

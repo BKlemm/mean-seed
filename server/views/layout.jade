@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/vendor/toastr/toastr.min.css')
+    link(rel='stylesheet', href='/vendor/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/themes/blue-theme/bootstrap-theme.css')
+    link(rel='stylesheet', href='/stylesheets/animate.css')
+  body(ng-app="app")
+    include ../includes/currentUser
+    block main-content
+    include ../includes/scripts

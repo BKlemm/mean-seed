@@ -1,0 +1,22 @@
+extends layout
+
+block main-content
+	.navbar.navbar-inverse.navbar-fixed-top
+		.container
+			.navbar-header
+				a.navbar-brand(href='#') Angularnode
+			.navbar-collapse.collapse 
+				ul.nav.navbar-nav
+					li 
+						a.active(href='/') Home
+					li 
+						a.active(href='/cources') Cources
+				div(ng-include="'/partials/account/navbar-login'")
+
+	section.content
+		div.view-animate-container
+			div.view-animate(ng-view)
+
+
+	footer.container.text-center
+		p &copy; 2014 Angularnode BKlemm

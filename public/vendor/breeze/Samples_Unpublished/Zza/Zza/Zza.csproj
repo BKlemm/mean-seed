@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{483D2E59-DB17-40E4-969F-BC859B5A1614}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zza</RootNamespace>
+    <AssemblyName>Zza</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Breeze.WebApi, Version=1.4.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Breeze.Server.WebApi.Core.1.4.2\lib\Breeze.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.30506\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivator, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <content Include="app\app.js" />
+    <content Include="app\appRun.js" />
+    <content Include="app\controllers\appController.js" />
+    <content Include="app\controllers\cartController.js" />
+    <content Include="app\controllers\orderProductController.js" />
+    <content Include="app\controllers\dashboardController.js" />
+    <content Include="app\controllers\orderItemController.js" />
+    <content Include="app\controllers\testController.js" />
+    <content Include="app\controllers\homeController.js" />
+    <content Include="app\controllers\routeController.js" />
+    <content Include="app\environment.js" />
+    <content Include="app\images\icon_tomato.png" />
+    <content Include="app\images\icon_vegetarian.png" />
+    <content Include="app\images\products\amadeus.jpg" />
+    <content Include="app\images\products\applejuice.jpg" />
+    <content Include="app\images\products\aquah2o.jpg" />
+    <content Include="app\images\products\asianchicken.jpg" />
+    <content Include="app\images\products\drink.jpg" />
+    <content Include="app\images\products\bigcountrysalad.jpg" />
+    <content Include="app\images\products\caesarsalad.jpg" />
+    <content Include="app\images\products\cascadefog.jpg" />
+    <content Include="app\images\products\chefsalad.jpg" />
+    <content Include="app\images\products\chickencaesarsalad.jpg" />
+    <content Include="app\images\products\chickencoolness.jpg" />
+    <content Include="app\images\products\cola.jpg" />
+    <content Include="app\images\products\dietcola.jpg" />
+    <content Include="app\images\products\dr.popper.jpg" />
+    <content Include="app\images\products\energade.jpg" />
+    <content Include="app\images\products\farmersalad.jpg" />
+    <content Include="app\images\products\gardengallop.jpg" />
+    <content Include="app\images\products\gardensalad.jpg" />
+    <content Include="app\images\products\grecoirish.jpg" />
+    <content Include="app\images\products\greeksalad.jpg" />
+    <content Include="app\images\products\greentea.jpg" />
+    <content Include="app\images\products\holysmokes.jpg" />
+    <content Include="app\images\products\hulapie.jpg" />
+    <content Include="app\images\products\italianstallion.jpg" />
+    <content Include="app\images\products\jerusalem.jpg" />
+    <content Include="app\images\products\lemonspruce.jpg" />
+    <content Include="app\images\products\lisbon.jpg" />
+    <content Include="app\images\products\littlevenus.jpg" />
+    <content Include="app\images\products\makeyourown.jpg" />
+    <content Include="app\images\products\mamamia.jpg" />
+    <content Include="app\images\products\nocheese.jpg" />
+    <content Include="app\images\products\orangejuice.jpg" />
+    <content Include="app\images\products\pestolante.jpg" />
+    <content Include="app\images\products\plaincheese.jpg" />
+    <content Include="app\images\products\porkbbq.jpg" />
+    <content Include="app\images\products\rootbeer.jpg" />
+    <content Include="app\images\products\shanghai.jpg" />
+    <content Include="app\images\products\southoftheborder.jpg" />
+    <content Include="app\images\products\spinachsalad.jpg" />
+    <content Include="app\images\products\tajmahal.jpg" />
+    <content Include="app\images\products\thaichickensalad.jpg" />
+    <content Include="app\images\products\tomterrific.jpg" />
+    <content Include="app\images\products\unknown.jpg" />
+    <content Include="app\metadata.js" />
+    <content Include="app\config.js" />
+    <content Include="app\services\databaseReset.js" />
+    <content Include="app\services\entityManagerFactory.js" />
+    <content Include="app\services\pricing.js" />
+    <content Include="app\services\util.js" />
+    <content Include="app\services\routes.js" />
+    <content Include="app\services\dataservice.js" />
+    <content Include="app\directives\directives.js" />
+    <content Include="app\filters\filters.js" />
+    <content Include="app\images\logo.png" />
+    <content Include="app\services\logger.js" />
+    <content Include="app\services\model.js" />
+    <content Include="app\views\about.html" />
+    <content Include="app\views\dashboard.html" />
+    <content Include="app\views\orderItemOptionCheckbox.html" />
+    <content Include="app\views\orderItemOptionRadio.html" />
+    <content Include="app\views\orderItem.html" />
+    <content Include="app\views\shellFooter.html" />
+    <content Include="app\views\shellHeader.html" />
+    <content Include="app\views\test.html" />
+    <content Include="app\views\orderProductPizza.html" />
+    <content Include="app\views\orderProductSalad.html" />
+    <content Include="app\views\orderProductDrinks.html" />
+    <content Include="app\views\home.html" />
+    <content Include="app\views\cart.html" />
+    <content Include="app\views\order.html" />
+    <content Include="App_Data\Zza-20130602100112.mdf" />
+    <content Include="App_Data\Zza-20130602100112_log.ldf">
+      <DependentUpon>Zza-20130602100112.mdf</DependentUpon>
+    </content>
+    <content Include="content\bootstrap-responsive.css" />
+    <content Include="content\bootstrap-responsive.min.css" />
+    <content Include="content\bootstrap.css" />
+    <content Include="content\bootstrap.min.css" />
+    <Content Include="content\breeze.directives.css" />
+    <content Include="content\font-awesome-ie7.min.css" />
+    <content Include="content\font-awesome.css" />
+    <content Include="content\font-awesome.min.css" />
+    <content Include="content\font\fontawesome-webfont.svg" />
+    <content Include="content\ie10mobile.css" />
+    <content Include="content\images\glyphicons-halflings-white.png" />
+    <content Include="content\images\glyphicons-halflings.png" />
+    <content Include="content\styles.css" />
+    <content Include="content\font\fontawesome-webfont.eot" />
+    <content Include="content\font\fontawesome-webfont.ttf" />
+    <content Include="content\font\fontawesome-webfont.woff" />
+    <content Include="content\font\FontAwesome.otf" />
+    <Content Include="content\toastr.css" />
+    <Content Include="content\toastr.min.css" />
+    <content Include="Global.asax" />
+    <content Include="index.html" />
+    <content Include="scripts\angular.js" />
+    <content Include="scripts\angular.min.js">
+      <DependentUpon>angular.js</DependentUpon>
+    </content>
+    <content Include="scripts\angular.min.js.map">
+      <DependentUpon>angular.min.js</DependentUpon>
+    </content>
+    <content Include="scripts\angular-mocks.js">
+      <DependentUpon>angular.js</DependentUpon>
+    </content>
+    <content Include="scripts\angular-animate.js">
+      <DependentUpon>angular.js</DependentUpon>
+    </content>
+    <content Include="scripts\angular-animate.min.js">
+      <DependentUpon>angular-animate.js</DependentUpon>
+    </content>
+    <content Include="scripts\angular-animate.min.js.map">
+      <DependentUpon>angular-animate.js</DependentUpon>
+    </content>
+    <content Include="scripts\angular-route.js">
+      <DependentUpon>angular.js</DependentUpon>
+    </content>
+    <content Include="scripts\angular-route.min.js">
+      <DependentUpon>angular-route.js</DependentUpon>
+    </content>
+    <content Include="scripts\angular-route.min.js.map">
+      <DependentUpon>angular-route.js</DependentUpon>
+    </content>
+    <content Include="scripts\breeze.debug.js" />
+    <Content Include="content\toastr.less" />
+    <none Include="scripts\breeze.intellisense.js">
+      <DependentUpon>breeze.debug.js</DependentUpon>
+    </none>
+    <content Include="scripts\breeze.min.js">
+      <DependentUpon>breeze.debug.js</DependentUpon>
+    </content>
+    <content Include="scripts\breeze.directives.validation.js">
+      <DependentUpon>breeze.debug.js</DependentUpon>
+    </content>
+    <content Include="scripts\breeze.savequeuing.js">
+      <DependentUpon>breeze.debug.js</DependentUpon>
+    </content>
+    <content Include="scripts\breeze.to%24q.js">
+      <DependentUpon>breeze.debug.js</DependentUpon>
+    </content>
+    <Content Include="scripts\q.js" />
+    <Content Include="scripts\q.min.js">
+      <DependentUpon>q.js</DependentUpon>
+    </Content>
+    <Content Include="scripts\toastr.js" />
+    <Content Include="scripts\toastr.min.js" />
+    <content Include="scripts\ui-bootstrap-tpls-0.4.0.js" />
+    <content Include="test\config\karma.conf.js" />
+    <content Include="scripts\modernizr-2.6.2.js" />
+    <content Include="scripts\jquery-2.0.2.js" />
+    <content Include="scripts\jquery-2.0.2.min.js">
+      <DependentUpon>jquery-2.0.2.js</DependentUpon>
+    </content>
+    <content Include="scripts\jquery.min.js.map">
+      <DependentUpon>jquery-2.0.2.js</DependentUpon>
+    </content>
+    <content Include="scripts\jquery-2.0.2.min.map">
+      <DependentUpon>jquery-2.0.2.js</DependentUpon>
+    </content>
+    <content Include="scripts\_references.js" />
+    <content Include="test\helpers\prepareTestData.js" />
+    <content Include="test\prepareTestData.html" />
+    <content Include="test\helpers\jasmineTestFns.js" />
+    <content Include="test\helpers\testFns.js" />
+    <content Include="test\lib\jasmine-async.js" />
+    <content Include="test\lib\jasmine-async.min.js" />
+    <content Include="test\lib\jasmine-html.js" />
+    <content Include="test\lib\jasmine.css" />
+    <content Include="test\lib\jasmine.js" />
+    <content Include="test\lib\sinon-1.7.1.js" />
+    <content Include="test\config\jasmineTestRunnerConfig.js" />
+    <content Include="test\testdata\smallOrderTestData.js" />
+    <content Include="test\specs\utilSpec.js" />
+    <content Include="test\testRunner.html" />
+    <content Include="test\testdata\lookups.js" />
+    <content Include="test\specs\configSpec.js" />
+    <content Include="test\specs\dataserviceSpec.js" />
+    <content Include="test\specs\firstspec.js" />
+    <content Include="test\specs\testControllerSpec.js" />
+    <content Include="test\specs\query-async-spec.js" />
+    <content Include="test\specs\save-async-spec.js" />
+    <content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BreezeSimpleCorsHandler.cs" />
+    <Compile Include="App_Start\BreezeWebApiConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="App_Start\ScriptWriter.cs" />
+    <Compile Include="Controllers\DevController.cs" />
+    <Compile Include="Controllers\ZzaEfController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <content Include="packages.config" />
+    <Content Include="scripts\toastr.min.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zza.DataAccess.EF\Zza.DataAccess.EF.csproj">
+      <Project>{57e72b09-3299-4af9-8a81-5d82c37613d7}</Project>
+      <Name>Zza.DataAccess.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zza.Interfaces\Zza.Interfaces.csproj">
+      <Project>{1dce6208-8e07-4e0e-b758-400452a50329}</Project>
+      <Name>Zza.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zza.Model\Zza.Model.csproj">
+      <Project>{ad7b32de-5331-45b2-b9a5-9d26a2e8d8a5}</Project>
+      <Name>Zza.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12955/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <PropertyGroup>
+    <PreBuildEvent>
+      IF EXIST "$(ProjectDir)..\..\..\Breeze.Client\scripts\breeze.debug.js" GOTO breezeExists
+      echo Source breeze.debug.js was not found in '$(ProjectDir)..\..\..\Breeze.Client\scripts\' and was not copied
+      GOTO :done
+      :breezeExists
+      echo Copying breeze.*.js from '$(ProjectDir)..\..\..\Breeze.Client\scripts\' to scripts\
+      COPY "$(ProjectDir)..\..\..\Breeze.Client\scripts\breeze.min.js" "$(ProjectDir)scripts" /Y
+      COPY "$(ProjectDir)..\..\..\Breeze.Client\scripts\breeze.debug.js" "$(ProjectDir)scripts" /Y
+      COPY "$(ProjectDir)..\..\..\Breeze.Client\scripts\breeze.intellisense.js" "$(ProjectDir)scripts" /Y
+      COPY "$(ProjectDir)..\..\..\Breeze.Client\scripts\IBlade\breeze.dataservice.mongo.js" "$(ProjectDir)scripts" /Y
+	  COPY "$(ProjectDir)..\..\..\Breeze.Client\scripts\Labs\breeze.directives.validation.js" "$(ProjectDir)scripts" /Y
+	  COPY "$(ProjectDir)..\..\..\Breeze.Client\scripts\Labs\breeze.directives.css" "$(ProjectDir)content" /Y
+      COPY "$(ProjectDir)..\..\..\Breeze.Client\scripts\Labs\breeze.savequeuing.js" "$(ProjectDir)scripts" /Y
+	  
+	  echo Copying breeze.*.js from '$(ProjectDir)..\..\..\Breeze.Client\scripts\' to ..\..\..\Samples\Zza-Node-Mongo\Zza-Node-Mongo\public\scripts
+      COPY "$(ProjectDir)..\..\..\Breeze.Client\scripts\breeze.min.js" "$(ProjectDir)..\..\..\Samples\Zza-Node-Mongo\Zza-Node-Mongo\public\scripts" /Y
+      COPY "$(ProjectDir)..\..\..\Breeze.Client\scripts\breeze.debug.js" "$(ProjectDir)..\..\..\Samples\Zza-Node-Mongo\Zza-Node-Mongo\public\scripts" /Y
+      COPY "$(ProjectDir)..\..\..\Breeze.Client\scripts\breeze.intellisense.js" "$(ProjectDir)..\..\..\Samples\Zza-Node-Mongo\Zza-Node-Mongo\public\scripts" /Y
+      COPY "$(ProjectDir)..\..\..\Breeze.Client\scripts\IBlade\breeze.dataservice.mongo.js" "$(ProjectDir)..\..\..\Samples\Zza-Node-Mongo\Zza-Node-Mongo\public\scripts" /Y
+	  COPY "$(ProjectDir)..\..\..\Breeze.Client\scripts\Labs\breeze.directives.validation.js" "$(ProjectDir)..\..\..\Samples\Zza-Node-Mongo\Zza-Node-Mongo\public\scripts" /Y
+	  COPY "$(ProjectDir)..\..\..\Breeze.Client\scripts\Labs\breeze.directives.css" "$(ProjectDir)..\..\..\Samples\Zza-Node-Mongo\Zza-Node-Mongo\public\content" /Y
+      COPY "$(ProjectDir)..\..\..\Breeze.Client\scripts\Labs\breeze.savequeuing.js" "$(ProjectDir)..\..\..\Samples\Zza-Node-Mongo\Zza-Node-Mongo\public\scripts" /Y
+	</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
